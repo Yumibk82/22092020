@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi feet meter</title>
+</head>
+<body>
+
+</body><form>
+    <p>Feet - Meter Converter</p>
+    <p>
+        <label>In feet</label>
+        <br>
+        <input id="inputFeet" type="number" placeholder="input Feet"
+               oninput="feetToMeter(this.value)"
+               onchange="feetToMeter(this.value)">
+    </p>
+    <p>In Meter is: <span id="outputInMeter"></span></p>
+
+    <p>Meter - Feet Converter</p>
+    <p>
+        <label>In Mater</label>
+        <br>
+        <input id="inputMeter" type="number" placeholder="input Meter"
+               oninput="meterToFeet(this.value)"
+               onchange="meterToFeet(this.value)">
+    </p>
+    <p>In Feet is: <span id="outputInFeet"></span></p>
+
+</form>
+
+<script>
+
+    function feetToMeter(feet) {
+        feet = parseFloat(feet);
+        document.getElementById("outputInMeter").innerHTML = 0.305*feet;
+    }
+    function meterToFeet(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("outputInFeet").innerHTML = 3.279*meter;
+    }
+
+</script>
+</html>

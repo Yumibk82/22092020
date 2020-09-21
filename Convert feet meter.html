@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi feet va meter</title>
+</head>
+<body>
+<h1>Feet and Meter Converting</h1>
+<form>
+    <label for="infeet">In feet: </label><br/>
+    <input type="number" id="infeet" oninput="feetToMeter(thisvalue)" onchange="feetToMeter(thisvalue)"/><br/>
+    <br/>
+    <label for="inmeter">In meter: </label><br/>
+    <input type="number" id="inmeter" oninput="meterToFeet(thisvalue)" onchange="meterToFeet(thisvalue)"/><br/>
+    <p id="resultmeter">Result in meter is: </p><br/>
+    <br/>
+    <p id="resultfeet">Result in feet is: </p><br/>
+
+</form>
+
+
+<script>
+    function feetToMeter(feet){
+        let meter = 0.305*feet;
+        return meter;
+    }
+    function meterToFeet(meter){
+        let feet=3.279*meter;
+        return feet;
+    }
+    function getinput() {
+        let feet1 = document.getElementById("infeet").value;
+        let meter1 = document.getElementById("inmeter").value;
+        let result1 = feetToMeter(feet1);
+        let result2 = meterToFeet(meter1);
+        document.getElementById("resultfeet").innerHTML = result1;
+        document.getElementById("resultmeter").innerHTML = result2;
+    }
+    getinput();
+</script>
+</body>
+</html>
