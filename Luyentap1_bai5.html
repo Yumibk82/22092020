@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyentap1_bai5</title>
+</head>
+<body>
+<script>
+    let a=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let b=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+    let x =prompt("please input the Star that you want to solve");
+    function abHandle() {
+        let flag=false;
+        for (let i = 0; i < a.length; i++) {
+            if (x === a[i]) {
+                //let index = a.indexOf(a[i]);
+                b[i] = x;
+                alert(i);
+                flag=true;
+            }
+        }
+        if (!flag){
+            document.write("Did not find out " + x);
+        }
+        document.write(b);
+    }abHandle();
+</script>
+</body>
+</html>
